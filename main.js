@@ -104,3 +104,59 @@ document.addEventListener("DOMContentLoaded", function () {
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
 });
+
+
+var swiper = new Swiper(".review-slider", {
+    spaceBetween : 20,
+    loop : true,
+    autoplay: {
+        delay : 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints : {
+        640: {
+        slidesPerView: 1,
+        },
+    768: {
+        slidesPerView: 2,
+    },
+        1024: {
+            sliderPerView: 3,
+        },
+    },
+});
+
+// Get elements
+const registerBtn = document.querySelector('.login-form-container a[href="#"]');
+const registerForm = document.getElementById('register-form');
+const registerClose = document.getElementById('register-close');
+const switchToLogin = document.getElementById('switch-to-login');
+const loginForm = document.getElementById('login-form');
+const loginBtn = document.getElementById('login-btn');
+const loginClose = document.querySelectorAll('#login-close')[0];
+
+registerBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    registerForm.style.display = 'block';
+    loginForm.style.display = 'none';
+});
+
+registerClose.addEventListener('click', function() {
+    registerForm.style.display = 'none';
+});
+
+switchToLogin.addEventListener('click', function(event) {
+    event.preventDefault();
+    registerForm.style.display = 'none';
+    loginForm.style.display = 'block';
+});
+
+loginBtn.addEventListener('click', function() {
+    loginForm.style.display = 'block';
+});
+
+loginClose.addEventListener('click', function() {
+    loginForm.style.display = 'none';
+});
+
+

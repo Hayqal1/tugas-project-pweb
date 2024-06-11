@@ -6,6 +6,7 @@
     <title>Travel Agency</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <header>
@@ -36,15 +37,29 @@
         <i class="fa-solid fa-xmark" id="login-close"></i>
         <form action="">
             <h3>Login</h3>
-            <input type="email" class="box" placeholder="Enter your email">
-            <input type="password" class="box" placeholder="Enter your password">
+            <input type="email" class="box" placeholder="Enter your email" required>
+            <input type="password" class="box" placeholder="Enter your password" required>
             <input type="submit" value="Login now" class="btn">
             <input type="checkbox" id="remember">
             <label for="remember">Remember me</label>
-            <p>Forget Password? <a href="#">Click Here</a></p>
-            <p>Don't have an account? <a href="#">Register Now</a></p>
+            <p>Don't have an account? <a href="#" id="switch-to-register">Register Now</a></p>
+            <p>Forget Password <a href="#" id="register-link">Click Here</a></p>
         </form>
     </div>
+
+    <div class="register-form-container" id="register-form">
+        <i class="fa-solid fa-xmark" id="register-close"></i>
+        <form action="">
+            <h3>Register</h3>
+            <input type="text" class="box" placeholder="Enter your name" required>
+            <input type="email" class="box" placeholder="Enter your email" required>
+            <input type="password" class="box" placeholder="Enter your password" required>
+            <input type="password" class="box" placeholder="Confirm your password" required>
+            <input type="submit" value="Register now" class="btn">
+            <p>Sudah punya akun? <a href="#" id="switch-to-login">Login sekarang</a></p>
+        </form>
+    </div>
+    
        
     <section class="home" id="home">
         <div class="content">
@@ -64,7 +79,7 @@
             <span>O</span>
             <span>O</span>
             <span>K</span>
-            <span class="space" > </span>
+            <span class="space"></span>
             <span>N</span>
             <span>O</span>
             <span>W</span>
@@ -174,22 +189,6 @@
                 <a href="#" class="btn">Book Now</a>
             </div>
         </div>
-        <div class="box">
-            <img src="image/jogja.jpg" alt="" >
-            <div class="content">
-                <h3><i class="fa-solid fa-location-dot"></i>Jogja</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, consectetur. Vitae maxime eligendi repellat temporibus beatae. Quaerat explicabo maiores omnis molestiae eligendi ab dolorem, cupiditate debitis architecto deleniti rerum asperiores.</p>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <div class="price">Rp. 350.000 <span>650.000</span></div>
-                <a href="#" class="btn">Book Now</a>
-            </div>
-        </div>
     </div>
     </section>
 
@@ -273,9 +272,121 @@
                 </div>
             </div>
         </div>
-
     </section>
+
+    <section class="review" id="review">
+        <h1 class="heading">
+            <span>R</span>
+            <span>E</span>
+            <span>V</span>
+            <span>I</span>
+            <span>E</span>
+            <span>W</span>
+        </h1>
+
+        <div class="swiper mySwipe review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="box">
+                    <img src="image/r3.jpg">
+                    <h3>Barrack Obama</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis adipisci assumenda nobis dolorem nisi dolores, temporibus ab perferendis culpa, beatae ipsam illum facilis modi! Facere dolorem sint voluptates quam minus!</p>
+                    <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-slider">
+                    <div class="box">
+                    <img src="image/R2.jpg">
+                    <h3>Beni Setiawan</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis adipisci assumenda nobis dolorem nisi dolores, temporibus ab perferendis culpa, beatae ipsam illum facilis modi! Facere dolorem sint voluptates quam minus!</p>
+                    <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                    <img src="image/r4.jpg">
+                    <h3>Clara</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis adipisci assumenda nobis dolorem nisi dolores, temporibus ab perferendis culpa, beatae ipsam illum facilis modi! Facere dolorem sint voluptates quam minus!</p>
+                    <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_main">
+            <div class="tag">
+                <h1>Contact</h1>
+                <a href="#"><i class="fa-solid fa-house"></i>Indonesia</a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+62 812 345 6789</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>contact@gmail.com</a>
+            </div>
+
+            <div class="tag">
+                <h1>Get Help</h1>
+                <a href="#" class="center">FAQ</a>
+                <a href="#" class="center">Travel</a>
+                <a href="#" class="center">Returns</a>
+                <a href="#" class="center">Payment Options</a>
+            </div>
+
+            <div class="tag">
+                <h1>Our Stores</h1>
+                <a href="#" class="center">SSemarang</a>
+                <a href="#" class="center">Yogyakarta</a>
+                <a href="#" class="center">Surabaya</a>
+                <a href="#" class="center">Bandung</a>
+            </div>
+
+            <div class="tag">
+                <h1>Follw Us</h1>
+                <div class="social_link">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>                    
+                </div>
+            </div>
+
+            <div class="tag">
+                <h1>Newsletter</h1>
+                <div class="search_bar">
+                    <input type="text" placeholder="You email id here">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 
     <script src="main.js"></script>
 </body>
 </html>
+
+
+
